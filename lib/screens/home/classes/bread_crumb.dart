@@ -13,7 +13,7 @@ class BreadCrumb {
 
   String get title => '$_name ${_isActive ? '>' : ''} ';
 
-  BreadCrumb({required String name, required bool isActive,}) :
+  BreadCrumb({required String name, bool isActive = false,}) :
     _name = name,
     _isActive = isActive,
     uuid = const Uuid().v4();
