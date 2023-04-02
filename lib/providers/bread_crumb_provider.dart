@@ -8,8 +8,8 @@ class BreadCrumbProvider extends ChangeNotifier{
   UnmodifiableListView<BreadCrumb> get breadCrumbs => UnmodifiableListView(_breadCrumbs);
 
   void addBreadCrumb(BreadCrumb breadCrumb) {
-    for(breadCrumb in _breadCrumbs) {
-      breadCrumb.isActive = true;
+    for(final bc in _breadCrumbs) {
+      bc.isActive = true;
     }
 
     _breadCrumbs.add(breadCrumb);
